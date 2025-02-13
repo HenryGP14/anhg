@@ -15,26 +15,42 @@
 
 
 :root {
-    --color-primary: #e91e63; /* Rosa fuerte */
-    --color-secondary: #ff80ab; /* Rosa claro */
-    --color-background: #ffffff; /* Fondo claro */
-    --color-text: #e91e63; /* Texto oscuro */
-    --color-text-light: #fff; /* Texto claro */
-    --color-border: #ff80ab; /* Borde gris */
-    --color-error: #ff0000; /* Rojo para errores */
-    --border-radius: 20px; /* Bordes curvos */
-    --sidebar-width: 250px; /* Ancho del sidebar */
+    --color-primary: #e91e63;
+    /* Rosa fuerte */
+    --color-secondary: #ff80ab;
+    /* Rosa claro */
+    --color-background: #ffffff;
+    /* Fondo claro */
+    --color-text: #e91e63;
+    /* Texto oscuro */
+    --color-text-light: #fff;
+    /* Texto claro */
+    --color-border: #ff80ab;
+    /* Borde gris */
+    --color-error: #ff0000;
+    /* Rojo para errores */
+    --border-radius: 20px;
+    /* Bordes curvos */
+    --sidebar-width: 250px;
+    /* Ancho del sidebar */
 }
 
 /* Modo Oscuro */
 .dark-mode {
-    --color-primary: #007796; /* Color principal (modo oscuro) */
-    --color-secondary: #00b3ce; /* Color secundario (modo oscuro) */
-    --color-background: #00283e; /* Fondo oscuro (modo oscuro) */
-    --color-text: #ffffff; /* Texto claro (modo oscuro) */
-    --color-text-light: #ffffff; /* Texto claro (modo oscuro) */
-    --color-border: #004a66; /* Borde oscuro (modo oscuro) */
+    --color-primary: #007796;
+    /* Color principal (modo oscuro) */
+    --color-secondary: #00b3ce;
+    /* Color secundario (modo oscuro) */
+    --color-background: #00283e;
+    /* Fondo oscuro (modo oscuro) */
+    --color-text: #ffffff;
+    /* Texto claro (modo oscuro) */
+    --color-text-light: #ffffff;
+    /* Texto claro (modo oscuro) */
+    --color-border: #004a66;
+    /* Borde oscuro (modo oscuro) */
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -66,10 +82,11 @@ h1 {
     color: var(--color-primary);
 }
 
-.titulo{
+.titulo {
     color: var(--color-text-light);
 }
-.titulo-sesion{
+
+.titulo-sesion {
     color: var(--color-text);
 }
 
@@ -79,26 +96,37 @@ form {
     gap: 10px;
 }
 
-input, button {
+input,
+button {
     padding: 10px;
     font-size: 1rem;
     border: 2px solid var(--color-border);
     border-radius: var(--border-radius);
 }
-input:focus, button:focus {
+
+input:focus,
+button:focus {
     outline: none;
     border-color: var(--color-primary);
 }
 
 button {
-    display: flex; /* Activa flexbox */
-    align-items: center; /* Alinea verticalmente al centro */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    gap: 8px; /* Espacio entre el ícono y el texto */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 10px 20px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño del texto */
-    transition: background-color 0.3s ease; /* Animación suave */
+    display: flex;
+    /* Activa flexbox */
+    align-items: center;
+    /* Alinea verticalmente al centro */
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
+    gap: 8px;
+    /* Espacio entre el ícono y el texto */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    font-size: 16px;
+    /* Tamaño del texto */
+    transition: background-color 0.3s ease;
+    /* Animación suave */
     background-color: var(--color-primary);
     color: var(--color-text-light);
     cursor: pointer;
@@ -109,7 +137,9 @@ button {
 button:hover {
     background-color: var(--color-secondary);
 }
-button:focus, a:focus {
+
+button:focus,
+a:focus {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
@@ -138,7 +168,8 @@ button:focus, a:focus {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinear contenido a la izquierda */
+    align-items: flex-start;
+    /* Alinear contenido a la izquierda */
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
     transition: transform 0.3s ease-in-out;
     position: fixed;
@@ -149,10 +180,14 @@ button:focus, a:focus {
     justify-content: flex-start;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .sidebar #logoutButton {
-    margin-top: auto; /* Empuja el botón hacia abajo, pero no demasiado */
-    margin-bottom: 60%; /* Espacio inferior */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+    margin-top: auto;
+    /* Empuja el botón hacia abajo, pero no demasiado */
+    margin-bottom: 60%;
+    /* Espacio inferior */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Transiciones suaves */
 }
 
 .sidebar h1 {
@@ -199,7 +234,8 @@ button:focus, a:focus {
 
 /* Botón de Hamburguesa */
 .hamburger-button {
-    display: none; /* Oculto por defecto */
+    display: none;
+    /* Oculto por defecto */
     position: fixed;
     top: 20px;
     left: 20px;
@@ -221,6 +257,14 @@ button:focus, a:focus {
 }
 
 /* Contenido Principal */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
 main {
     flex: 1;
     padding: 20px;
@@ -243,14 +287,19 @@ main {
     opacity: 1;
     transform: translateY(0);
 }
+
 .content-section:not(.active) {
     opacity: 0;
-    transform: translateY(20px);
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Botón Flotante de Modo Oscuro */
@@ -270,16 +319,18 @@ main {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.3s;
-    z-index: 1000; /* Asegura que el botón se quede encima de todos los demás elementos */
+    z-index: 1000;
+    /* Asegura que el botón se quede encima de todos los demás elementos */
 }
 
 
-.floating-button:hover, #logoutButton:hover {
+.floating-button:hover,
+#logoutButton:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Botón Flotante de Cerrar Sesion */
-#logoutButton{
+#logoutButton {
     position: fixed;
     top: 90px;
     right: 20px;
@@ -295,8 +346,10 @@ main {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.3s;
-    z-index: 1000; /* Asegura que el botón se quede encima de todos los demás elementos */
+    z-index: 1000;
+    /* Asegura que el botón se quede encima de todos los demás elementos */
 }
+
 #logoutButton:hover {
     background-color: var(--color-secondary);
     transform: scale(1.1);
@@ -312,7 +365,8 @@ main {
     transform: rotate(45deg);
     opacity: 0;
     animation: floatHearts 5s infinite ease-in;
-    pointer-events: none; /* Evita que los corazones interfieran con otros elementos */
+    pointer-events: none;
+    /* Evita que los corazones interfieran con otros elementos */
 }
 
 .heart::before,
@@ -340,6 +394,7 @@ main {
         transform: translateY(0) rotate(0deg);
         opacity: 1;
     }
+
     100% {
         transform: translateY(-100vh) rotate(360deg);
         opacity: 0;
@@ -396,7 +451,6 @@ main {
 /* Estilos generales para la sección */
 #recuerdos {
     padding: 2rem;
-    background-color: var(--color-background);
     color: var(--color-text);
     border-radius: var(--border-radius);
     margin: 2rem auto;
@@ -575,6 +629,7 @@ main {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -610,15 +665,18 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     padding: 20px;
-    background-color: var(--color-background); /* Fondo del contenedor */
+    background-color: var(--color-background);
+    /* Fondo del contenedor */
 }
 
 .collage-item {
     position: relative;
     overflow: hidden;
-    border-radius: var(--border-radius); /* Bordes curvos */
+    border-radius: var(--border-radius);
+    /* Bordes curvos */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 1px solid var(--color-border); /* Borde del collage */
+    border: 1px solid var(--color-border);
+    /* Borde del collage */
 }
 
 .collage-item img {
@@ -635,8 +693,10 @@ main {
 .overlay {
     position: absolute;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
-    color: var(--color-text-light); /* Texto claro */
+    background: rgba(0, 0, 0, 0.7);
+    /* Fondo semitransparente */
+    color: var(--color-text-light);
+    /* Texto claro */
     width: 100%;
     padding: 10px;
     text-align: center;
@@ -650,11 +710,13 @@ main {
 
 /* Estilos adicionales para modo oscuro */
 .dark-mode .collage-item {
-    border-color: var(--color-border); /* Borde en modo oscuro */
+    border-color: var(--color-border);
+    /* Borde en modo oscuro */
 }
 
 .dark-mode .overlay {
-    background: rgba(0, 0, 0, 0.8); /* Overlay más oscuro en modo oscuro */
+    background: rgba(0, 0, 0, 0.8);
+    /* Overlay más oscuro en modo oscuro */
 }
 
 .music-collage {
@@ -684,12 +746,13 @@ main {
 }
 
 /* Estilos para la tarjeta de música */
-.music-container{
+.music-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     padding: 20px;
 }
+
 .music-card {
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
@@ -754,53 +817,58 @@ audio {
 }
 
 /*sorpresa*/
-    /* Estilos generales */
-    .sorpresa-container {
-        text-align: center;
-        margin-top: 20px;
+/* Estilos generales */
+.sorpresa-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sorpresa-btn {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sorpresa-btn:hover {
+    background-color: var(--color-secondary);
+}
+
+.sorpresa-content {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sorpresa-content img {
+    max-width: 100%;
+    border-radius: var(--border-radius);
+}
+
+.sorpresa-content p {
+    font-size: 1.2em;
+    color: var(--color-text);
+    margin-top: 10px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
 
-    .sorpresa-btn {
-        background-color: var(--color-primary);
-        color: var(--color-text-light);
-        border: none;
-        padding: 10px 20px;
-        border-radius: var(--border-radius);
-        font-size: 1.2em;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
+    to {
+        opacity: 1;
     }
+}
 
-    .sorpresa-btn:hover {
-        background-color: var(--color-secondary);
-    }
-
-    .sorpresa-content {
-        margin-top: 20px;
-        padding: 20px;
-        background-color: var(--color-background);
-        border: 1px solid var(--color-border);
-        border-radius: var(--border-radius);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .sorpresa-content img {
-        max-width: 100%;
-        border-radius: var(--border-radius);
-    }
-
-    .sorpresa-content p {
-        font-size: 1.2em;
-        color: var(--color-text);
-        margin-top: 10px;
-        animation: fadeIn 0.5s ease;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-    
 
 
 
@@ -819,16 +887,18 @@ audio {
 
     main {
         margin-left: 0;
-        padding-top: 80px; /* Espacio para el botón de hamburguesa */
+        padding-top: 80px;
+        /* Espacio para el botón de hamburguesa */
     }
 
     .hamburger-button {
-        display: flex; /* Mostrar en móviles */
+        display: flex;
+        /* Mostrar en móviles */
     }
 
 }
 
-@media  (max-width: 1023px){
+@media (max-width: 1023px) {
     .sidebar {
         transform: translateX(-100%);
     }
@@ -839,10 +909,12 @@ audio {
 
     main {
         margin-left: 0;
-        padding-top: 80px; /* Espacio para el botón de hamburguesa */
+        padding-top: 80px;
+        /* Espacio para el botón de hamburguesa */
     }
 
     .hamburger-button {
-        display: flex; /* Mostrar en móviles */
+        display: flex;
+        /* Mostrar en móviles */
     }
 }

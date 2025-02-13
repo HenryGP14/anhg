@@ -103,7 +103,7 @@ window.addEventListener("load", () => {
 particlesJS("particles-js", {
    particles: {
       number: {
-         value: 10, // Número de partículas (corazones)
+         value: 10, // Número de partículas
          density: {
             enable: true,
             value_area: 800,
@@ -112,15 +112,20 @@ particlesJS("particles-js", {
       shape: {
          type: "image",
          image: {
-            src: "https://img.icons8.com/?size=100&id=12306&format=png&color=000000", // Aquí puedes usar cualquier imagen de corazón
-            width: 2,
-            height: 2,
+            src: "https://img.icons8.com/?size=100&id=12306&format=png&color=000000",
+         },
+      },
+      size: {
+         value: 45, // Tamaño de la partícula (ajústalo según tu necesidad)
+         random: true, // Hace que las partículas tengan tamaños aleatorios
+         anim: {
+            enable: false, // Evita que cambie dinámicamente el tamaño
          },
       },
       move: {
          enable: true,
-         speed: 1, // Velocidad de caída
-         direction: "top", // Dirección hacia abajo
+         speed: 1, // Velocidad de movimiento
+         direction: "top",
          random: true,
          straight: false,
          out_mode: "out",
