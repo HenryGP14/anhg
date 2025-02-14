@@ -1,3 +1,53 @@
+if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+   document.body.innerHTML = `
+       <div class="blocked-container">
+           <div class="blocked-message">
+               <h1>⚠️ Acceso Restringido</h1>
+               <p>Esta página no está disponible en dispositivos móviles.</p>
+           </div>
+       </div>
+   `;
+   document.head.innerHTML += `
+       <style>
+           * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+           }
+           .blocked-container {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               height: 100vh;
+               background: linear-gradient(135deg, #ff4e50, #ff80ab);
+               color: white;
+               font-family: Arial, sans-serif;
+               text-align: center;
+               padding: 20px;
+           }
+           .blocked-message {
+               background: rgba(0, 0, 0, 0.7);
+               padding: 30px;
+               border-radius: 10px;
+               box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+               animation: fadeIn 1s ease-in-out;
+           }
+           @keyframes fadeIn {
+               from { opacity: 0; transform: scale(0.9); }
+               to { opacity: 1; transform: scale(1); }
+           }
+           h1 {
+               font-size: 24px;
+               margin-bottom: 10px;
+           }
+           p {
+               font-size: 18px;
+           }
+       </style>
+   `;
+}
+
+
 // Modo Oscuro
 const toggleDarkModeButton = document.getElementById("toggleDarkMode");
 const body = document.body;
